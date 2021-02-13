@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/valentine/static/css/main.6b6dbf73.chunk.css",
-    "main.js": "/valentine/static/js/main.a8babda3.chunk.js",
-    "main.js.map": "/valentine/static/js/main.a8babda3.chunk.js.map",
+    "main.js": "/valentine/static/js/main.3c7ee4f4.chunk.js",
+    "main.js.map": "/valentine/static/js/main.3c7ee4f4.chunk.js.map",
     "runtime-main.js": "/valentine/static/js/runtime-main.bfd4f23e.js",
     "runtime-main.js.map": "/valentine/static/js/runtime-main.bfd4f23e.js.map",
     "static/js/2.2b3c5ffb.chunk.js": "/valentine/static/js/2.2b3c5ffb.chunk.js",
@@ -24,12 +24,13 @@
     "static/media/heart6.5bf554d6.png": "/valentine/static/media/heart6.5bf554d6.png",
     "static/media/heart7.cbd02a8a.png": "/valentine/static/media/heart7.cbd02a8a.png",
     "static/media/heart8.107ca2bd.png": "/valentine/static/media/heart8.107ca2bd.png",
-    "static/media/song.b14312b9.m4a": "/valentine/static/media/song.b14312b9.m4a"
+    "static/media/song.b14312b9.m4a": "/valentine/static/media/song.b14312b9.m4a",
+    "static/media/song2.4ca07b4e.mp3": "/valentine/static/media/song2.4ca07b4e.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.bfd4f23e.js",
     "static/js/2.2b3c5ffb.chunk.js",
     "static/css/main.6b6dbf73.chunk.css",
-    "static/js/main.a8babda3.chunk.js"
+    "static/js/main.3c7ee4f4.chunk.js"
   ]
 }

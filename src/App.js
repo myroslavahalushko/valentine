@@ -105,6 +105,8 @@ function useWindowDimensions() {
 const Hearts = ({x, y, level}) => {
     const [littleHearts, setLittleHearts] = useState([]);
     const [image, setImage] = useState(gameLevels[1].img);
+    console.log(x);
+    console.log(y);
     const createArray = () => {
         let rand = Math.floor(Math.random()*5+1);
         let array = [];
@@ -125,20 +127,12 @@ const Hearts = ({x, y, level}) => {
     }, []);
     return (
         <>
-            {littleHearts.map((h, index) => {
-                return (index == 0)
-                    ? <img
-                           src={image} alt="logo"
-                           className={`littleHearts littleHeartsAnimate`}
-                           style={{top: y, left: x}}
-                    />
-                    : <img
+            {littleHearts.map((h) =>  <img
                            src={image} alt="logo"
                            className={`littleHearts littleHeartsAnimate`}
                            style={{top: y+h.top, left: x+h.left}}
                     />
-
-            })}
+            )}
         </>
 )
 }
@@ -159,7 +153,9 @@ function App() {
 
     const addHearts = useCallback((e) => {
         e.preventDefault();
-        if ((e.screenX > 470 && e.screenX < 700) && (e.screenY > 414 && e.screenY < 643)) return;
+        if ((e.screenX > (width/2-150) && e.screenX < (width/2+150)) 
+        && (e.screenY > (height/2-150) && e.screenY < (height/2+150)) 
+        && ((e.screenX < (190) && e.screenY < (70)))) return
 
         setLittleHearts((prev) => {
             return [...prev, {

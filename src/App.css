@@ -1,0 +1,103 @@
+.AppDark {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(25, 25, 25, 1);
+  color: white;
+}
+
+.AppLight {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(125, 15, 25, 0.2);
+  color: black;
+}
+
+.heartBlock {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: calc((100vh - 400px)/2);
+  left: calc((100vw - 400px)/2);
+}
+
+.heartAnimate {
+  animation: heartbeat 1s linear infinite;
+}
+
+.heart {
+  width: 100%;
+  height: 100%;
+}
+
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  30% {
+    transform: scale(1.4);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(1.4);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.littleHearts {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+
+.littleHeartsAnimate {
+  animation: heartmove 3s cubic-bezier(0.1, 0, 0.2, 0) 1 forwards;
+}
+
+@keyframes heartmove {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+
+  }
+  10% {
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  30% {
+    transform: scale(1.4);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(1.4);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    top: -60px;
+  }
+}
+
+.score {
+  font-weight: 900;
+  font-size: 20px;
+  padding: 20px;
+}
+

@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/valentine/static/css/main.5337e57d.chunk.css",
+    "main.js": "/valentine/static/js/main.11f0160f.chunk.js",
+    "main.js.map": "/valentine/static/js/main.11f0160f.chunk.js.map",
+    "runtime-main.js": "/valentine/static/js/runtime-main.bfd4f23e.js",
+    "runtime-main.js.map": "/valentine/static/js/runtime-main.bfd4f23e.js.map",
+    "static/js/2.2b3c5ffb.chunk.js": "/valentine/static/js/2.2b3c5ffb.chunk.js",
+    "static/js/2.2b3c5ffb.chunk.js.map": "/valentine/static/js/2.2b3c5ffb.chunk.js.map",
+    "static/js/3.d69ee061.chunk.js": "/valentine/static/js/3.d69ee061.chunk.js",
+    "static/js/3.d69ee061.chunk.js.map": "/valentine/static/js/3.d69ee061.chunk.js.map",
+    "static/js/4.233d2b55.chunk.js": "/valentine/static/js/4.233d2b55.chunk.js",
+    "static/js/4.233d2b55.chunk.js.map": "/valentine/static/js/4.233d2b55.chunk.js.map",
+    "index.html": "/valentine/index.html",
+    "static/css/main.5337e57d.chunk.css.map": "/valentine/static/css/main.5337e57d.chunk.css.map",
+    "static/js/2.2b3c5ffb.chunk.js.LICENSE.txt": "/valentine/static/js/2.2b3c5ffb.chunk.js.LICENSE.txt",
+    "static/js/3.d69ee061.chunk.js.LICENSE.txt": "/valentine/static/js/3.d69ee061.chunk.js.LICENSE.txt",
+    "static/media/heart.3a0fdf65.svg": "/valentine/static/media/heart.3a0fdf65.svg",
+    "static/media/heart1.73e3881b.png": "/valentine/static/media/heart1.73e3881b.png",
+    "static/media/heart2.53ab6470.png": "/valentine/static/media/heart2.53ab6470.png",
+    "static/media/heart3.edfd0bd2.png": "/valentine/static/media/heart3.edfd0bd2.png",
+    "static/media/heart4.58da2c99.png": "/valentine/static/media/heart4.58da2c99.png",
+    "static/media/heart5.25eeda2f.png": "/valentine/static/media/heart5.25eeda2f.png",
+    "static/media/heart6.5bf554d6.png": "/valentine/static/media/heart6.5bf554d6.png",
+    "static/media/heart7.cbd02a8a.png": "/valentine/static/media/heart7.cbd02a8a.png",
+    "static/media/heart8.107ca2bd.png": "/valentine/static/media/heart8.107ca2bd.png",
+    "static/media/song.b14312b9.m4a": "/valentine/static/media/song.b14312b9.m4a"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bfd4f23e.js",
+    "static/js/2.2b3c5ffb.chunk.js",
+    "static/css/main.5337e57d.chunk.css",
+    "static/js/main.11f0160f.chunk.js"
+  ]
+}

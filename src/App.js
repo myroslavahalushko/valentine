@@ -138,7 +138,7 @@ function App() {
             }]
         });
         setScore((score) => score+1);
-        if(score < 3) {
+        if(score < 666) {
             if(score == gameLevels[level+1].score) {
                 setLevel(level+1);
             }

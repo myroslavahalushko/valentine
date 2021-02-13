@@ -1,7 +1,8 @@
 import logo from './hearts/heart.svg';
 import './App.css';
 import {useState, useEffect, useCallback} from "react";
-import song from './song.m4a';
+import song1 from './song.m4a';
+import song2 from './song2.mp3';
 import useSound from 'use-sound';
 import heart1 from './hearts/heart1.png';
 import heart2 from './hearts/heart2.png';
@@ -12,35 +13,6 @@ import heart6 from './hearts/heart6.png';
 import heart7 from './hearts/heart7.png';
 import heart8 from './hearts/heart8.png';
 
-const titleInEnglish = [
-    "Fly me to the Moon",
-    "Let me sing among those stars",
-    "Let me see what spring is like",
-    "On Jupiter and Mars",
-    "In other words, hold my hand",
-    "In other words, darling kiss me",
-    "Fill my heart with song",
-    "Let me sing for ever more",
-    "You are all I long for",
-    "All I worship and adore",
-    "In other words, please be true",
-    "In other words, I love you"
-];
-
-const titleInRussian = [
-    "Унеси меня на Луну",
-    "Позволь мне петь среди далеких звезд.",
-    "Позволь мне увидеть весну",
-    "На Юпитере или Марсе.",
-    "Другими словами, возьми меня за руку",
-    "Другими словами, милый, поцелуй меня.",
-    "Наполни мое сердце песней",
-    "Позволь мне петь беспрестанно.",
-    "Ты — это все, что я страстно желаю",
-    "Все, чем я восхищаюсь и что боготворю.",
-    "Другими словами, пожалуйста, пусть это будет правдой",
-    "Другими словами, я люблю тебя..."
-]
 
 let gameLevels = {
    1: {
@@ -48,31 +20,31 @@ let gameLevels = {
        img: heart1
    },
     2: {
-       score: 50,
+       score: 60,
         img: heart2
     },
     3: {
-        score: 110,
+        score: 120,
         img: heart3
     },
     4: {
-        score: 180,
+        score: 228,
         img: heart4
     },
     5: {
-        score: 260,
+        score: 322,
         img: heart5
     },
     6: {
-        score: 350,
+        score: 470,
         img: heart6
     },
     7: {
-        score: 450,
+        score: 520,
         img: heart7
     },
     8: {
-        score: 560,
+        score: 666,
         img: heart8
     },
 
@@ -105,8 +77,6 @@ function useWindowDimensions() {
 const Hearts = ({x, y, level}) => {
     const [littleHearts, setLittleHearts] = useState([]);
     const [image, setImage] = useState(gameLevels[1].img);
-    console.log(x);
-    console.log(y);
     const createArray = () => {
         let rand = Math.floor(Math.random()*5+1);
         let array = [];
@@ -144,8 +114,11 @@ function App() {
     const [level, setLevel] = useState(1);
     const [littleHearts, setLittleHearts] = useState([]);
     const [darkMode, setDarkMode] = useState(false);
+    const [songUrl, setSongUrl] = useState(song2);
+    const [win, setWin] = useState(false);
 
-    const [play, { pause }] = useSound(song);
+    const [play, { pause }] = useSound(songUrl);
+    
     const onClickHeart = () => {
         setHeartBeat(!heartBeat);
         !heartBeat ? play() : pause();
@@ -165,9 +138,21 @@ function App() {
             }]
         });
         setScore((score) => score+1);
-        if(level < 8) {
+        if(score < 3) {
             if(score == gameLevels[level+1].score) {
                 setLevel(level+1);
+            }
+        } else {
+            if(!win) {
+                let result = prompt("Ошибка! Успех!", ["PS: ***"]);
+                setWin(true);
+                if(result === "муп") {
+                    setHeartBeat(false);
+                    pause();
+                    setSongUrl(song1);
+                } else {
+                    alert("Гррр");
+                }
             }
         }
 

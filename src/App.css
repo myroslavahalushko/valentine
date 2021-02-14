@@ -2,14 +2,16 @@
   width: 100vw;
   height: 100vh;
   background: rgba(25, 25, 25, 1);
-  color: white;
+  color: #7d0f19;
+  position: fixed;
 }
 
 .AppLight {
   width: 100vw;
   height: 100vh;
   background: rgba(125, 15, 25, 0.2);
-  color: black;
+  color: #191919;
+  position: fixed;
 }
 
 .heartBlock {

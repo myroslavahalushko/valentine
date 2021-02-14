@@ -13,7 +13,6 @@ import heart6 from './hearts/heart6.png';
 import heart7 from './hearts/heart7.png';
 import heart8 from './hearts/heart8.png';
 
-
 let gameLevels = {
    1: {
        score: 0,
@@ -50,35 +49,11 @@ let gameLevels = {
 
 }
 
-function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-        width,
-        height
-    };
-}
-
-function useWindowDimensions() {
-    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-
-    useEffect(() => {
-        function handleResize() {
-            setWindowDimensions(getWindowDimensions());
-        }
-
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    return windowDimensions;
-}
-
-
 const Hearts = ({x, y, level}) => {
     const [littleHearts, setLittleHearts] = useState([]);
     const [image, setImage] = useState(gameLevels[1].img);
     const createArray = () => {
-        let rand = Math.floor(Math.random()*5+1);
+        let rand = Math.floor(Math.random()*3+1);
         let array = [];
         for(let i = 0; i < rand; i++) {
             array.push(
@@ -109,7 +84,6 @@ const Hearts = ({x, y, level}) => {
 
 function App() {
     const [heartBeat, setHeartBeat] = useState(false);
-    const { height, width } = useWindowDimensions();
     const [score, setScore] = useState(0);
     const [level, setLevel] = useState(1);
     const [littleHearts, setLittleHearts] = useState([]);
@@ -126,9 +100,7 @@ function App() {
 
     const addHearts = useCallback((e) => {
         e.preventDefault();
-        if ((e.screenX > (width/2-150) && e.screenX < (width/2+150)) 
-        && (e.screenY > (height/2-150) && e.screenY < (height/2+150)) 
-        && ((e.screenX < (190) && e.screenY < (70)))) return
+        if (((e.screenX < (190) && e.screenY < (105)))) return
 
         setLittleHearts((prev) => {
             return [...prev, {
@@ -146,6 +118,7 @@ function App() {
             if(!win) {
                 let result = prompt("Ошибка! Успех!", ["PS: ***"]);
                 setWin(true);
+                setLevel(level+1);
                 if(result === "муп") {
                     setHeartBeat(false);
                     pause();
